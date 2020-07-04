@@ -1,9 +1,9 @@
 #importing and printing of the csv files as DF
-population <- data.frame(read.csv("C:\\Users\\34609\\Documents\\DataTB\\4.R\\Trans Py2R\\state-population.csv", 
+population <- data.frame(read.csv("C:\\Users\\34609\\Documents\\DataTB\\4.R\\Trans Py2R\\Py-2-R\\state-population.csv", 
                        header = TRUE, na.strings = c("","NA"), sep = ",")) #na.strings make sure NAs are not read as empty strings
-areas <- data.frame(read.csv("C:\\Users\\34609\\Documents\\DataTB\\4.R\\Trans Py2R\\state-areas.csv",
+areas <- data.frame(read.csv("C:\\Users\\34609\\Documents\\DataTB\\4.R\\Trans Py2R\\Py-2-R\\state-areas.csv",
                   header = TRUE, na.strings = c("","NA"), sep = ","))
-abbrev <- data.frame(read.csv("C:\\Users\\34609\\Documents\\DataTB\\4.R\\Trans Py2R\\state-abbrevs.csv", 
+abbrev <- data.frame(read.csv("C:\\Users\\34609\\Documents\\DataTB\\4.R\\Trans Py2R\\Py-2-R\\state-abbrevs.csv", 
                    header = TRUE, na.strings = c("","NA"), sep = ","))
 
 colnames(population)[1] = "R"
@@ -29,7 +29,7 @@ final <- merge(clean_merged, areas, by = "state", all.x = TRUE)
 head(final)
 
 #importing and printing as DF the survey csv file 
-survey <- data.frame(read.csv("C:\\Users\\34609\\Documents\\DataTB\\4.R\\Trans Py2R\\fcc_2016_coder_survey_subset.csv", 
+survey <- data.frame(read.csv("C:\\Users\\34609\\Documents\\DataTB\\4.R\\Trans Py2R\\Py-2-R\\fcc_2016_coder_survey_subset.csv", 
                               header = TRUE, na.strings = c("","NA"), sep = ","))
 colnames(survey)
 survey_coder <- subset(survey, select = c(ID.x, EmploymentField, Age, Income))
